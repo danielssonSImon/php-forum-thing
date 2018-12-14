@@ -47,6 +47,8 @@ $result = $conn->query($sql);
               }
           }
           else {
+          } else {
+>>>>>>> 11b7ad1fb6f63413ef3939598e005c79557b3d8b
               echo "No questions asked";
           }
          ?>

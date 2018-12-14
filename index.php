@@ -1,7 +1,38 @@
 <?php
 require_once('connect.php');
-$conn=connect();
- ?>
+$conn = connect();
+
+
+function EchoBoy ($row , $id) {
+
+   echo
+   "<div id = 'game$id'>",
+   "<h2>",$row["Datum"],"</h2>",
+   "<p>",$row["Status"],"</p>",
+   '</div>';
+
+ }
+
+
+
+$sql = "SELECT post.Status, post.Datum  FROM post ";
+$result = $conn->query($sql);
+?>
+<aside>
+        <?php
+
+          $tmp = 0;
+
+       if ($result->num_rows > 0) {
+              // output data of each row
+              while($row = $result->fetch_assoc()) {
+                  $tmp++;
+                  EchoBoy($row, $tmp);
+              }
+          } else {
+              echo "0 results";
+          }
+         ?>
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="../css.css">
@@ -18,6 +49,20 @@ $conn=connect();
 
       </div>
       <div class="text">
+        <?php
+
+          $tmp = 0;
+
+       if ($result->num_rows > 0) {
+              // output data of each row
+              while($row = $result->fetch_assoc()) {
+                  $tmp++;
+                  EchoBoy($row, $tmp);
+              }
+          } else {
+              echo "0 results";
+          }
+         ?>
 
       </div>
         <form class="form" action="submit.php" method="post">
@@ -28,5 +73,6 @@ $conn=connect();
 
       </div>
     </div>
+    <?php $conn->close(); ?>
   </body>
 </html>

@@ -20,7 +20,7 @@
 
 .header{
   grid-area: header;
-  background: blue;
+  background: pink;
 }
 .main{
   grid-area: main;
@@ -48,7 +48,7 @@
 
 .input{
 grid-area: name;
-height: 18px;
+height: 24px;
 -webkit-box-shadow: -8px 2px 8px -5px rgba(0,0,0,0.75);
 -moz-box-shadow: -8px 2px 8px -5px rgba(0,0,0,0.75);
 box-shadow: -8px 2px 8px -5px rgba(0,0,0,0.75);
@@ -56,7 +56,7 @@ box-shadow: -8px 2px 8px -5px rgba(0,0,0,0.75);
 .submit{
 grid-area: otherName;
 margin-left: 10px;
-height:24px;
+height:30px;
 -webkit-box-shadow: -8px 2px 8px -5px rgba(0,0,0,0.75);
 -moz-box-shadow: -8px 2px 8px -5px rgba(0,0,0,0.75);
 box-shadow: -8px 2px 8px -5px rgba(0,0,0,0.75);

@@ -23,7 +23,7 @@ $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
   <html lang="en">
-  <link rel="stylesheet" href="../css.css">
+  <link rel="stylesheet" href="../master.css">
     <head>
       <meta charset="utf-8">
       <title>Ask a question!</title>

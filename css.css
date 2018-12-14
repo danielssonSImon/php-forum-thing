@@ -29,6 +29,7 @@
 .text{
   grid-area: text;
   background-color: green;
+
 }
 .form {
   grid-area: submit;

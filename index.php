@@ -19,20 +19,6 @@ $sql = "SELECT post.Status, post.Datum  FROM post ";
 $result = $conn->query($sql);
 ?>
 <aside>
-        <?php
-
-          $tmp = 0;
-
-       if ($result->num_rows > 0) {
-              // output data of each row
-              while($row = $result->fetch_assoc()) {
-                  $tmp++;
-                  EchoBoy($row, $tmp);
-              }
-          } else {
-              echo "0 results";
-          }
-         ?>
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="../css.css">

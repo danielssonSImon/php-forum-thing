@@ -7,8 +7,8 @@ function EchoBoy ($row , $id) {
 
    echo
    "<div id = 'game$id'>",
+  "<p>",$row["Status"],"</p>",
    "<h2>",$row["Datum"],"</h2>",
-   "<p>",$row["Status"],"</p>",
    '</div>';
 
  }
@@ -45,8 +45,9 @@ $result = $conn->query($sql);
                   $tmp++;
                   EchoBoy($row, $tmp);
               }
-          } else {
-              echo "0 results";
+          }
+          else {
+              echo "No questions asked";
           }
          ?>
 
